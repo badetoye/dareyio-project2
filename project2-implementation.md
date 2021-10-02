@@ -53,3 +53,29 @@ Another way to retrieve a Public IP address, other than to check it in AWS Web c
 
 `curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
 
+Step 2 — Installing MySQL
+
+Now that we have a web server up and running, we need to install a Database Management System (DBMS) to be able to store and manage data for our site in a relational database. MySQL is a popular relational database management system used within PHP environments, so we will use it in this project.
+
+>To install mysql server using apt package manager, run:
+
+`sudo apt install mysql-server`
+
+When the installation is finished, it’s recommended that we run a security script that comes pre-installed with MySQL. This script will remove some insecure default settings and lock down access to our database system. Start the interactive script by running:
+
+`sudo mysql_secure_installation`
+
+This will ask if you want to configure the VALIDATE PASSWORD PLUGIN.
+
+>To test if we are able to log in to the MySQL console, run:
+
+`sudo mysql`
+
+This will connect to the MySQL server as the administrative database user root, which is inferred by the use of sudo when running this command. We should see output like this:
+
+![mysql](https://user-images.githubusercontent.com/40571508/135734311-5c457ff3-326e-4b7d-b4c6-ca1833d40b48.PNG)
+
+Step 3 – Installing PHP
+
+
+
